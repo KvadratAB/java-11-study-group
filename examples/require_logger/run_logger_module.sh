@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java --module-path outDir -m require_logger/se.kvadrat.example.RequireLoggerExample
+java --module-path build -m require_logger/se.kvadrat.example.RequireLoggerExample
