@@ -1,0 +1,3 @@
+module thefourth {
+    requires thethird;
+}
