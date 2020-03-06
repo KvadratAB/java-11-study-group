@@ -1,10 +1,10 @@
-package se.kvadrat.example.model;
+package se.kvadrat.example.lower;
 
-public class SomeModel {
+public class LowerClass {
     private String ohYeah;
     private String state;
 
-    public SomeModel(final String ohYeah, final String state) {
+    public LowerClass(final String ohYeah, final String state) {
         this.ohYeah = ohYeah;
         this.state = state;
     }

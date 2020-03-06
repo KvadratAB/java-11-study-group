@@ -1,16 +1,16 @@
 package se.kvadrat.example.middle;
 
-import se.kvadrat.example.model;
+import se.kvadrat.example.lower.LowerClass;
 
 public class MiddleClass {
     
-    private SomeModel model;
+    private LowerClass lower;
 
     public MiddleClass() {
-        model = new SomeModel("YEAH!", "RELAXED");
+        lower = new LowerClass("YEAH!", "RELAXED");
     } 
     
-    public SomeModel getModel() {
-        return model;
+    public LowerClass getLower() {
+        return lower;
     }
 }

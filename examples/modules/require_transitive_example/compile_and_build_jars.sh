@@ -1,16 +1,24 @@
 #!/bin/bash
-mkdir build
+mkdir -p build
 
-cd model_module
+cd lower_module
 javac $(find . -name "*.java") 
 
-jar --create --file model.module.jar -C . .
+jar --create --file lower.module.jar -C . .
 
 cd ../middle_module
-javac -p ../model_module/model.module.jar $(find . -name "*.java") 
+javac -p ../lower_module/lower.module.jar $(find . -name "*.java")
 
-jar --create --file middle.module.jar --main-class se.kvadrat.example.middle.MiddleClass -C . .
+jar --create --file middle.module.jar -C . .
+
+cd ../upper_module
+javac -p ../middle_module/middle.module.jar $(find . -name "*.java")
+
+jar --create --file upper.module.jar --main-class se.kvadrat.example.upper.UpperClass -C . .
 
 cd ..
-mv model_module/model.module.jar build/
+mv lower_module/lower.module.jar build/
 mv middle_module/middle.module.jar build/
+mv upper_module/upper.module.jar build/
+
+
