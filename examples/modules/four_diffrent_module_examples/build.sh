@@ -23,21 +23,21 @@ jar -c -f output/mlib/fourth.jar -C output/classes .
 /bin/rm -rf output/classes
 
 echo ''
-echo 'Old jar on class path (unnamed modules)'
+echo '1. Old jar on class path (unnamed modules)'
 java -cp output/mlib/first.jar:output/mlib/second.jar \
     se.kvadrat.second.Second
 
 echo ''
-echo 'Old jar on module path (automatic modules)'
+echo '2. Old jar on module path (automatic modules)'
 java -p output/mlib \
     -m second/se.kvadrat.second.Second
 
 echo ''
-echo 'Module jar on class path (unnamed modules)'
+echo '3. Module jar on class path (unnamed modules)'
 java -cp output/mlib/third.jar:output/mlib/fourth.jar \
     se.kvadrat.fourth.Fourth
 
 echo ''
-echo 'Module jar on module path (explicit named modules)'
+echo '4. Module jar on module path (explicit named modules)'
 java -p output/mlib \
     -m thefourth/se.kvadrat.fourth.Fourth
