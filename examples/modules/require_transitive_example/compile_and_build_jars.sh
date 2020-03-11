@@ -19,5 +19,3 @@ javac -p ../build $(find . -name "*.java")
 
 jar --create --file upper.module.jar --main-class se.kvadrat.example.upper.UpperClass -C . .
 mv upper.module.jar ../build/
-
-
