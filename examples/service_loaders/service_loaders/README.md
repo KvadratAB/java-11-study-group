@@ -1,10 +1,11 @@
 # Simple example with three modules
 
-Module 1 defines the interface, that package is exported in module info.
+Service defines the interface, that package is exported in module info.
 
-Module 2 uses an interace defined in module 1.
+Client uses an interace defined in module 1.
 
-Module 3 provides an implementation for the interface. 
+Provider provides an implementation for the interface. 
+Provider Static provides a static method that returns an instance of the interface. 
 
 
 Build with `./build.sh``
